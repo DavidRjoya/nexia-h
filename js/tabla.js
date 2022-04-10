@@ -1,5 +1,4 @@
-var users = [
-    {
+var users = [{
         id: 1,
         name: "Bob",
         address: "Manila",
@@ -13,21 +12,21 @@ var users = [
     }
 ];
 
-$.each(users, function (i, user) {
+$.each(users, function(i, user) {
     appendToUsrTable(user);
 });
 
-$("form").submit(function (e) {
+$("form").submit(function(e) {
     e.preventDefault();
 });
 
-$("form#addUser").submit(function () {
+$("form#addUser").submit(function() {
     var user = {};
     var nameInput = $('input[name="name"]').val().trim();
     var addressInput = $('input[name="address"]').val().trim();
     var ageInput = $('input[name="age"]').val().trim();
     if (nameInput && addressInput && ageInput) {
-        $(this).serializeArray().map(function (data) {
+        $(this).serializeArray().map(function(data) {
             user[data.name] = data.value;
         });
         var lastUser = users[Object.keys(users).sort().pop()];
@@ -45,7 +44,7 @@ function addUser(user) {
 }
 
 function editUser(id) {
-    users.forEach(function (user, i) {
+    users.forEach(function(user, i) {
         if (user.id == id) {
             $(".modal-body").empty().append(`
                   <form id="updateUser" action="">
@@ -68,7 +67,7 @@ function editUser(id) {
 function deleteUser(id) {
     var action = confirm("Are you sure you want to delete this user?");
     var msg = "User deleted successfully!";
-    users.forEach(function (user, i) {
+    users.forEach(function(user, i) {
         if (user.id == id && action != false) {
             users.splice(i, 1);
             $("#userTable #user-" + user.id).remove();
@@ -81,9 +80,9 @@ function updateUser(id) {
     var msg = "User updated successfully!";
     var user = {};
     user.id = id;
-    users.forEach(function (user, i) {
+    users.forEach(function(user, i) {
         if (user.id == id) {
-            $("#updateUser").children("input").each(function () {
+            $("#updateUser").children("input").each(function() {
                 var value = $(this).val();
                 var attr = $(this).attr("name");
                 if (attr == "name") {
@@ -96,7 +95,7 @@ function updateUser(id) {
             });
             users.splice(i, 1);
             users.splice(user.id - 1, 0, user);
-            $("#userTable #user-" + user.id).children(".userData").each(function () {
+            $("#userTable #user-" + user.id).children(".userData").each(function() {
                 var attr = $(this).attr("name");
                 if (attr == "name") {
                     $(this).text(user.name);
@@ -106,7 +105,7 @@ function updateUser(id) {
                     $(this).text(user.age);
                 }
             });
-            $(".modal").modal("toggle");
+            $(".modal");
             flashMessage(msg);
         }
     });
@@ -115,7 +114,7 @@ function updateUser(id) {
 function flashMessage(msg) {
     $(".flashMsg").remove();
     $(".row").prepend(`
-          <div class="col-sm-12"><div class="flashMsg alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>${msg}</strong></div></div>
+    <div class="col-sm-12"><div class="flashMsg alert alert-success alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <strong>${msg}</strong></div></div>
       `);
 }
 

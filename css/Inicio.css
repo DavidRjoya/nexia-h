@@ -1,27 +1,34 @@
-ul{
-  float: left;
-  list-style-type: none;
-  padding: 0; 
-  /* AÑADIMOS */
-  position: relative; 
-  left: 50%;
+ul {
+    float: left;
+    list-style-type: none;
+    padding: 0;
+    /* AÑADIMOS */
+    position: relative;
+    left: 50%;
 }
-li{
-  float: left;
-  /* AÑADIMOS */
-  position: relative; 
-  right: 50%;
+
+li {
+    float: left;
+    /* AÑADIMOS */
+    position: relative;
+    right: 50%;
 }
-.logo_menu{
-  max-width: 200px;
-  padding-left: 50px;
+
+.logo_menu {
+    max-width: 200px;
+    padding-left: 50px;
 }
-.navbar{
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  /* padding-top: 0.5rem; */
-  padding-bottom: 0.5rem;
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-top: 0.5rem; */
+    padding-bottom: 0.5rem;
+}
+
+.navbar-brand {
+    padding: 0;
 }
