@@ -2,13 +2,15 @@ var users = [{
         id: 1,
         name: "Bob",
         address: "Manila",
-        age: 27
+        age: "bobslld3",
+        rol: "Administrador"
     },
     {
         id: 2,
         name: "Harry",
         address: "Baguio",
-        age: 32
+        age: "contrsfgg5",
+        rol: "Recepcionista"
     }
 ];
 
@@ -25,7 +27,9 @@ $("form#addUser").submit(function() {
     var nameInput = $('input[name="name"]').val().trim();
     var addressInput = $('input[name="address"]').val().trim();
     var ageInput = $('input[name="age"]').val().trim();
-    if (nameInput && addressInput && ageInput) {
+    var rolInput = $('input[name="rol"]').val().trim();
+
+    if (nameInput && addressInput && ageInput && rolInput) {
         $(this).serializeArray().map(function(data) {
             user[data.name] = data.value;
         });
@@ -34,7 +38,7 @@ $("form#addUser").submit(function() {
 
         addUser(user);
     } else {
-        alert("All fields must have a valid value.");
+        alert("Todos los campos deben tener un valor valido.");
     }
 });
 
@@ -54,6 +58,8 @@ function editUser(id) {
                       <input class="form-control" type="text" name="address" value="${user.address}"/>
                       <label for="age">Contraseña</label>
                       <input class="form-control" type="text" name="age" value="${user.age}" />
+                      <label for="rol">rol</label>
+                      <input class="form-control" type="text" name="rol" value="${user.rol}"/>
               `);
             $(".modal-footer").empty().append(`
                       <button type="button" type="submit" class="btn btn-primary" onClick="updateUser(${id})">Save changes</button>
@@ -65,7 +71,7 @@ function editUser(id) {
 }
 
 function deleteUser(id) {
-    var action = confirm("Are you sure you want to delete this user?");
+    var action = confirm("Esta seguro de Eliminar el usuario?");
     var msg = "Usuario Eliminado con Exito!";
     users.forEach(function(user, i) {
         if (user.id == id && action != false) {
@@ -91,6 +97,8 @@ function updateUser(id) {
                     user.address = value;
                 } else if (attr == "age") {
                     user.age = value;
+                }else if (attr == "rol") {
+                    user.rol = value;
                 }
             });
             users.splice(i, 1);
@@ -101,9 +109,11 @@ function updateUser(id) {
                     $(this).text(user.name);
                 } else if (attr == "address") {
                     $(this).text(user.address);
-                } else {
+                } else if  (attr == "age"){
                     $(this).text(user.age);
-                }
+                } else {
+                    $(this).text(user.rol);
+                } 
             });
             $(".modal");
             flashMessage(msg);
@@ -124,6 +134,7 @@ function appendToUsrTable(user) {
               <td class="userData" name="name">${user.name}</td>
               '<td class="userData" name="address">${user.address}</td>
               '<td id="tdAge" class="margincon userData" name="age">${user.age}</td>
+              '<td class="userData" name="rol">${user.rol}</td>
               '<td align="center">
                   <button class="btn_verde btn-success form-control" onClick="editUser(${user.id})" data-toggle="modal" data-target="#myModal")">EDIT</button>
               </td>
