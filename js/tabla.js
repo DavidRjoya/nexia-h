@@ -48,12 +48,12 @@ function editUser(id) {
         if (user.id == id) {
             $(".modal-body").empty().append(`
                   <form id="updateUser" action="">
-                      <label for="name">Name</label>
+                      <label for="name">Nombre</label>
                       <input class="form-control" type="text" name="name" value="${user.name}"/>
-                      <label for="address">Address</label>
+                      <label for="address">Usuario</label>
                       <input class="form-control" type="text" name="address" value="${user.address}"/>
-                      <label for="age">Age</label>
-                      <input class="form-control" type="number" name="age" value="${user.age}" min=10 max=100/>
+                      <label for="age">Contraseña</label>
+                      <input class="form-control" type="text" name="age" value="${user.age}" />
               `);
             $(".modal-footer").empty().append(`
                       <button type="button" type="submit" class="btn btn-primary" onClick="updateUser(${id})">Save changes</button>
@@ -66,7 +66,7 @@ function editUser(id) {
 
 function deleteUser(id) {
     var action = confirm("Are you sure you want to delete this user?");
-    var msg = "User deleted successfully!";
+    var msg = "Usuario Eliminado con Exito!";
     users.forEach(function(user, i) {
         if (user.id == id && action != false) {
             users.splice(i, 1);
@@ -77,7 +77,7 @@ function deleteUser(id) {
 }
 
 function updateUser(id) {
-    var msg = "User updated successfully!";
+    var msg = "Usuario Actualizado con Exito!";
     var user = {};
     user.id = id;
     users.forEach(function(user, i) {
@@ -123,12 +123,12 @@ function appendToUsrTable(user) {
           <tr id="user-${user.id}">
               <td class="userData" name="name">${user.name}</td>
               '<td class="userData" name="address">${user.address}</td>
-              '<td id="tdAge" class="userData" name="age">${user.age}</td>
+              '<td id="tdAge" class="margincon userData" name="age">${user.age}</td>
               '<td align="center">
-                  <button class="btn btn-success form-control" onClick="editUser(${user.id})" data-toggle="modal" data-target="#myModal")">EDIT</button>
+                  <button class="btn_verde btn-success form-control" onClick="editUser(${user.id})" data-toggle="modal" data-target="#myModal")">EDIT</button>
               </td>
               <td align="center">
-                  <button class="btn btn-danger form-control" onClick="deleteUser(${user.id})">DELETE</button>
+                  <button class="btn_red btn-danger form-control" onClick="deleteUser(${user.id})">DELETE</button>
               </td>
           </tr>
       `);
