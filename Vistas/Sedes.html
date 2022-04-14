@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/Inicio.css">
     <link rel="stylesheet" href="../css/crud.css">
 
-    <title>Regionales</title>
+    <title>Sedes</title>
 </head>
 
 <!-- *********** INICIO NAV BAR ******************** -->
@@ -40,8 +40,8 @@
               Configuracion
             </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Regionales</a>
-                        <a class="dropdown-item" href="Sedes.html">Sedes</a>
+                        <a class="dropdown-item" href="Regionales.html">Regionales</a>
+                        <a class="dropdown-item" href="#">Sedes</a>
                         <a class="dropdown-item" href="#">Habitaciones</a>
                     </div>
                 </li>
@@ -67,13 +67,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h3 class="bordeizquierdo">Agregar Regional </h3>
+                <h3 class="bordeizquierdo">Agregar Sede </h3>
                 <form id="addUser" class="colorForm " action="">
                     <div class="form-group">
-                        <input class="form-control" type="text" name="regional" placeholder="Nombre" required>
+                        <input class="form-control" type="text" name="sede" placeholder="Nombre" required>
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="text" name="codigo" placeholder="Codigo" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="regional" placeholder="Regional" required>
                     </div>
                     <div class="wrap">
                     <button class="button  " type="submit">Agregar</button>
@@ -81,11 +84,12 @@
                 </form>
             </div>
             <div class="col-md-8">
-                <h3 class="bordederecho">Regionales</h3>
+                <h3 class="bordederecho">Sedes</h3>
                 <table id="userTable" class="table_borde table table-dark table-striped ">
                     <tr>
                         <th>Nombre</th>
-                        <th colspan="5">Codigo</th>
+                        <th>Codigo</th>
+                        <th colspan="3">Regional</th>
                     </tr>
                 </table>
             </div>
@@ -107,7 +111,7 @@
     <!-- partial -->
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
-    <script src="../js/regional.js"></script>
+    <script src="../js/sede.js"></script>
     <!-- TABLA-->
 
 
