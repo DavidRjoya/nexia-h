@@ -3,7 +3,8 @@
     }
     
     body {
-        background: #d5eafc;
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,115,148,1) 35%, rgba(0,173,206,1) 100%);
         color: white;
         font-family: sans-serif;
     }
