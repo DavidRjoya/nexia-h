@@ -1,6 +1,6 @@
 .body{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,115,148,1) 35%, rgba(0,173,206,1) 100%);
+    background: rgb(0, 212, 255)!important;
+    background: radial-gradient(circle, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 60%, rgba(2, 0, 36, 1) 100%)!important;
 }
 .generos{
   

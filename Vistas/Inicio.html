@@ -8,8 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/Inicio.css">
-    <link rel="stylesheet" href="../css/crud.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'><link rel="stylesheet" href="../css/dashboard.css">
+
     <title>Inicio</title>
 
     <!-- Inicio Script include html -->
@@ -50,47 +51,60 @@
 
 </head>
 
-<div w3-include-html="./navbar.html"></div>
 
+<section>
+    <div w3-include-html="./navbar.html"></div>
+</section>
 
 <body>
 
-
-
-
-
-    <!-- GRAFICOS INICIO-->
-    <!-- GRAFICOS FIN-->
-
-
-
-    <!-- ------------ Scripts Originales ------------ -->
-
-
-
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        javascript ">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
-        javascript ">javascript" >
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
-
-
-
-
-    <!-- ------------ Scripts Mod ------------ -->
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous">
-    </script>
-
+    <div class="wrapper">
+        <h1>ESTADISTICAS HOTEL</h1>
+        <div class="pie-charts">
+          <div class="pieID--micro-skills pie-chart--wrapper">
+            <h2>Regional-Bogota</h2>
+            <div class="pie-chart">
+              <div class="pie-chart__pie"></div>
+              <ul class="pie-chart__legend">
+                <li><em>Sede-</em><span>1</span></li>
+                <li><em>Sede-</em><span>2</span></li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class="pieID--categories pie-chart--wrapper">
+            <h2>Usuarios</h2>
+            <div class="pie-chart">
+              <div class="pie-chart__pie"></div>
+              <ul class="pie-chart__legend">
+                <li><em>Recepcionista-</em><span>40</span></li>
+                <li><em>Administradores-</em><span>10</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="pieID--operations pie-chart--wrapper">
+            <h2>Reserva Regionales</h2>
+            <div class="pie-chart">
+              <div class="pie-chart__pie"></div>
+              <ul class="pie-chart__legend">
+                <li><em>Bogota-</em><span>40</span></li>
+                <li><em>Cali-</em><span>25</span></li>
+                <li><em>Medellin-</em><span>25</span></li>
+                <li><em>Cartagena-</em><span>10</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <h3>NUMERO DE RESERVAS POR AÑO</h3>
+      <div class="graph_container">
+        <canvas id="Chart1"></canvas>
+      </div>
+      <!-- partial -->
+        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        <script src='https://codepen.io/MaciejCaputa/pen/EmMooZ.js'></script><script  src="../js/dashboard.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.js'></script><script  src="../js/charts2.js"></script>
 
 
     <script>

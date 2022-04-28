@@ -15,8 +15,8 @@ html {
 }
 
 body {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,115,148,1) 35%, rgba(0,173,206,1) 100%);
+    background: rgb(0, 212, 255);
+    background: radial-gradient(circle, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 60%, rgba(2, 0, 36, 1) 100%);
     color: var(--negro);
     font-family: sans-serif;
 }
@@ -155,6 +155,7 @@ body {
         width: 100%;
         margin-bottom: 20px;
     }
+
     .card-form__col:last-child {
         margin-bottom: 0;
     }
@@ -501,6 +502,7 @@ body {
     .card-item__numberItem {
         width: 13px;
     }
+
     .card-item__numberItem.-active {
         width: 16px;
     }
@@ -510,6 +512,7 @@ body {
     .card-item__numberItem {
         width: 12px;
     }
+
     .card-item__numberItem.-active {
         width: 8px;
     }
@@ -770,6 +773,7 @@ body {
         right: auto;
         margin-top: 20px;
     }
+
     .github-btn:active {
         transform: scale(1.1);
         box-shadow: 0px 17px 20px -6px rgba(36, 52, 70, 0.36);
