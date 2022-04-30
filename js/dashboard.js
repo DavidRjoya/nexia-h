@@ -48,7 +48,7 @@ function sliceSize(dataNum, dataTotal) {
         "purple",
         "turquoise",
         "forestgreen",
-        "navy"
+        "aqua"
       ];
   
     color = shuffle( color );

@@ -3,9 +3,9 @@ header {
 }
 
 body {
-    background: rgb(0, 212, 255);
-    background: radial-gradient(circle, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 60%, rgba(2, 0, 36, 1) 100%);
-    color: white;
+    background: rgb(66,191,217);
+    background: linear-gradient(0deg, rgba(66,191,217,1) 0%, rgba(159,224,230,1) 53%, rgba(255,255,255,1) 100%);
+    color: rgb(255, 255, 255);
     font-family: sans-serif;
 }
 
