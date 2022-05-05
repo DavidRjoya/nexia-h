@@ -1,6 +1,6 @@
-.body{
-    background: rgb(0, 212, 255)!important;
-    background: radial-gradient(circle, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 60%, rgba(2, 0, 36, 1) 100%)!important;
+body{
+    background: rgb(66,191,217);
+    background: linear-gradient(0deg, rgba(66,191,217,1) 0%, rgba(159,224,230,1) 53%, rgba(255,255,255,1) 100%);
 }
 .generos{
   
@@ -21,6 +21,13 @@
 }
 
 .carta{
-    border-radius: 4px!important;
-
+    align-items: center;
+    width: 100px;
+    margin: 5px;
+    border-radius: 25px;
+}
+.imagenD{
+    margin: 10px;
+    width: 95%;
+    height: 65%;
 }

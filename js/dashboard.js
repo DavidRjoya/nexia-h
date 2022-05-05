@@ -40,15 +40,15 @@ function sliceSize(dataNum, dataTotal) {
       dataElement   = id + " .pie-chart__legend"
   
       color         = [
-        "cornflowerblue",
+        "teal",
         "olivedrab",
         "orange",
         "tomato",
         "crimson",
         "purple",
-        "turquoise",
+        "Golden ",
         "forestgreen",
-        "aqua"
+        "coral"
       ];
   
     color = shuffle( color );
