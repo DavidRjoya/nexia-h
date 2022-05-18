@@ -1,7 +1,7 @@
 var users = [{
     id: 1,
     name: "Bob",
-    lastnm: "Manila" , 
+    apellido: "Manila" , 
     identification: "1010101010",
     mail: "prueba@gmail.com",
     genero: "Masculino"
@@ -9,7 +9,7 @@ var users = [{
 {
     id: 2,
     name: "Lady",
-    lastnm: "Baguio",
+    apellido: "Baguio",
     identification: "2020202020",
     mail: "prueba2@gmail.com",
     genero: "Femenino"
@@ -27,12 +27,12 @@ e.preventDefault();
 $("form#addUser").submit(function() {
 var user = {};
 var nameInput = $('input[name="name"]').val().trim();
-var lastnmInput = $('input[name="lastnm"]').val().trim();
+var apellidoInput = $('input[name="apellidos"]').val().trim();
 var identificationInput = $('input[name="identification"]').val().trim();
 var mailInput = $('input[name="mail"]').val().trim();
 var generoInput = $('input[name="genero"]').val().trim();
 
-if (nameInput && lastnmInput && identificationInput && mailInput && generoInput) {
+if (nameInput && apellidoInput && identificationInput && mailInput && generoInput) {
     $(this).serializeArray().map(function(data) {
         user[data.name] = data.value;
     });
@@ -57,8 +57,8 @@ users.forEach(function(user, i) {
               <form id="updateUser" action="">
                   <label for="name">Nombres</label>
                   <input class="form-control" type="text" name="name" value="${user.name}"/>
-                  <label for="lastnm">Apellidos</label>
-                  <input class="form-control" type="text" name="lastnm" value="${user.lastnm}"/>
+                  <label for="apellido">Apellido</label>
+                  <input class="form-control" type="text" name="apellido" value="${user.apellido}"/>
                   <label for="identification"># Identificación</label>
                   <input class="form-control" type="number" name="identification" value="${user.identification}" />
                   <label for="mail">Correo</label>
@@ -98,8 +98,8 @@ users.forEach(function(user, i) {
             var attr = $(this).attr("name");
             if (attr == "name") {
                 user.name = value;
-            } else if (attr == "lastnm") {
-                user.lastnm = value;
+            } else if (attr == "apellido") {
+                user.apellido = value;
             } else if (attr == "identification") {
                 user.identification = value;
             } else if (attr == "mail") {
@@ -114,8 +114,8 @@ users.forEach(function(user, i) {
             var attr = $(this).attr("name");
             if (attr == "name") {
                 $(this).text(user.name);
-            } else if (attr == "lastnm") {
-                $(this).text(user.lastnm);
+            } else if (attr == "apellido") {
+                $(this).text(user.apellido);
             } else if (attr == "identification") {
                 $(this).text(user.identification);
             } else if  (attr == "mail"){
@@ -137,11 +137,12 @@ $(".row").prepend(`
   `);
 }
 
-// '<td class="userData" name="lastnm">${user.lastnm}</td> --> variable apellido
+
 function appendToUsrTable(user) {
 $("#userTable > tbody:last-child").append(`
       <tr id="user-${user.id}">
-           <td class="userData" name="name">${user.name} ${user.lastnm}</td>
+           <td class="userData" name="name">${user.name}</td>
+          '<td class="userData" name="apellido">${user.apellido}</td>
           '<td class="margincon userData" name="identification">${user.identification}</td>
           '<td class="userData" name="mail">${user.mail}</td>
           '<td class="userData" name="genero">${user.genero}</td>

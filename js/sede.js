@@ -22,11 +22,11 @@ e.preventDefault();
 
 $("form#addUser").submit(function() {
 var user = {};
-var regionalInput = $('input[name="regional"]').val().trim();
+var sedeInput = $('input[name="sede"]').val().trim();
 var codigoInput = $('input[name="codigo"]').val().trim();
 var regionalInput = $('input[name="regional"]').val().trim();
 
-if (regionalInput && codigoInput) {
+if (sedeInput && codigoInput &&regionalInput) {
     $(this).serializeArray().map(function(data) {
         user[data.name] = data.value;
     });
@@ -53,7 +53,7 @@ users.forEach(function(user, i) {
                   <input class="form-control" type="text" name="sede" value="${user.sede}"/>
                   <label for="codigo">Codigo</label>
                   <input class="form-control" type="text" name="codigo" value="${user.codigo}"/>
-                  <label for="codigo">Regional</label>
+                  <label for="regional">Regional</label>
                   <input class="form-control" type="text" name="regional" value="${user.regional}"/>
 
           `);
@@ -88,20 +88,24 @@ users.forEach(function(user, i) {
             var value = $(this).val();
             var attr = $(this).attr("name");
             if (attr == "sede") {
-                user.regional = value;
+                user.sede = value;
             } else if  (attr == "codigo"){
                 user.codigo = value;
+            }else if (attr == "regional") {
+                user.regional = value;
             }
         });
         users.splice(i, 1);
         users.splice(user.id - 1, 0, user);
         $("#userTable #user-" + user.id).children(".userData").each(function() {
             var attr = $(this).attr("name");
-            if (attr == "regional") {
+            if (attr == "sede") {
                 $(this).text(user.sede);
-            } else {
+            } else if (attr == "codigo") {
                 $(this).text(user.codigo);
-            } 
+            } else {
+                $(this).text(user.regional);
+            }
         });
         $(".modal");
         flashMessage(msg);
