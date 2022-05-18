@@ -1,6 +1,7 @@
 body{
     background: rgb(66,191,217);
     background: linear-gradient(0deg, rgba(66,191,217,1) 0%, rgba(159,224,230,1) 53%, rgba(255,255,255,1) 100%);
+    padding-bottom: 10rem;
 }
 .generos{
   
