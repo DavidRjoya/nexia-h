@@ -130,13 +130,12 @@ body {
     flex-direction: row;
         
   }
-  @media (max-width: 650px) {
+  @media   (max-width: 890px) {
     .pie-charts {
       flex-direction: column;
     }
   }
-
-
+  
   .graph_container{
     padding: auto;
     margin: auto;  
@@ -144,3 +143,4 @@ body {
     margin-top: 100px;
     width: 850px;
   }
+ 
